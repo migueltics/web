@@ -1,0 +1,259 @@
+/*importamos o tipo de letra "bangers" de google fonts. Buscar titorial de como importanr fontes de Google Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/*Hacemos un reset a todos os espazos que deixa o navegador por defecto* */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Estilos principais */
+
+
+h2 {
+	font-size: 1.8rem; /*(tamaño 16 pixeles) por 1.8, onde rem=16 pix*/
+	text-align: center;
+	text-transform: uppercase; /*transforma todas as letras de h2 en maísculas*/
+	font-weight: 500; /*ancho da letra*/
+	padding-bottom: 50px; /*deixa un espacio por debaixo de 50px*/
+	font-family: 'Bangers'; /*tipo de letra que importamos de google fonts*/
+	color: #000000;
+}
+
+h3 {
+	font-size: 1.4rem;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+	font-weight: 400;
+	font-family: 'Bangers';
+	color: #000000;
+}
+
+p {
+	font-size: 1rem;
+	margin: 10px 0; /*marxe superior e inferior de 10px e marxe esquerda e dereita de 0 puntos*/
+	line-height: 1.7em; /*salto de línea*/
+}
+
+a {
+	text-decoration: none;
+} /* enlaces sen a liña que ten por defecto, e decir lle quito a liña*/
+
+/* Utility Classes */
+
+.container {
+	margin: auto; /* 0px de marxen vertical, centrado horizontalmente */
+	max-width: 1300px; /*coloca o ancho de 1300px como valor máximo do container*/
+	overflow: auto;
+	padding: 0 20px; /*crea un espacio en los bordes*/
+}
+
+.large {
+	font-size: 20px;
+}
+
+.texto-contacto{
+	font-size: 16px;
+}
+
+.medium{
+	font-size: 19px;
+}
+
+.btn {
+	display: inline-block;
+	font-size: 15px;
+	padding: 15px 40px; /*me permite separar el texto da liña do botón: 15px arriba/abaixo e 40px esquerda, dereita*/
+	letter-spacing: 1px; /*separación entre letras*/
+	font-family: 'Bangers';
+}
+
+.btn-outline {
+	background: transparent;
+	border: 1px solid #ffffff; /*color blanco*/
+	color: #000000;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.btn-outline:hover { /*cando pase o ratón por encima que me cambie os cores de fondo e das letras*/
+	background: #001aff; /*cor branco en Hex*/
+	color: #ffffff;;/*cor negro en Hex*/
+}
+
+/* Navbar */
+#navbar {
+	overflow: auto; / *define o que fai se o tamaño e moi grande*/
+	padding-top: 20px; 
+	padding-bottom: 20px;
+}
+
+#navbar a:hover {
+	color: #2f319f; /*cor do enlace de cor negro*/
+	transition: 0.2s
+}
+
+#navbar .logo {
+	float: left; /*posiciona a esquerda do contenedor*/
+	padding-top: 12px;
+}
+
+#navbar img {
+	height: 80px;
+}
+
+#navbar ul {
+	list-style: none; /*lle quitamos os puntos a lista non ordeada*/
+	float: right; /*mandamos o menú a dereita do contenedor*/
+
+}
+
+#navbar ul li {
+	float: left; /*en vez de listarse os list items, (li) en vertical, se teñen que poñer xuntos na mesma liña*/ 
+}
+
+#navbar ul li a { 
+	display: block;
+	padding: 20px;
+	text-align: center;
+	font-size: 26px;
+	font-family: 'Bangers';
+	color: #000000;
+}
+
+.segredo {
+	opacity: 0;
+	color: transparent;
+	transition: opacity 0.5s ease, color 0.5s ease;
+
+}
+#navbar ul li:hover .segredo {
+	opacity: 1;
+	color:#b6acac;
+	font-size: 26px;
+}
+
+
+#showcase {
+ 	background-image: url("img/imagenfondo.png");
+ 	background: ;background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; /*Scales the image (while preserving its ratio) to the smallest possible size to fill the container*/
+	height: 600px; /*altura da foto principal*/
+	text-align: center;
+	padding: 100px;
+
+}
+#showcase .btn {
+	margin-top: 180px;   /*distancia dende enriba para poñer o botón de proxectos na foto principal*/
+}
+
+/* Projects */
+#projects {
+	padding: 80px 0;
+}
+
+.projects-row {
+	display: flex;
+
+	/*crea un display axustando as fotos nunha liña, se non o utilizo se ven en filas*/
+}
+
+.projects-row img {
+	width: 100%; /*axusta ao 100% a imaxe*/
+}
+
+/* About */
+#about {
+	padding: 80px 0;
+	background: #f5f5f5;/*fondo cor gris*/
+}
+
+.about-row {
+	display: flex;
+}
+
+.about-row-experience,
+.about-row-me {
+	width: 50%;/*a mitad da pantalla*/
+	padding-left: 50px;
+}
+
+
+/* Contact */
+#contact {
+	padding: 80px 0;
+}
+
+.contact-row {
+	display: flex;
+}
+.contact-row-icon {
+	width: 33%;
+	text-align: center;
+}
+
+.contact-row-icon img {
+	height: 60px;
+}
+
+/* Footer */
+#mainfooter {
+	background: #ffe2e2;
+	text-align: center;
+	padding: 30px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:rgb(0, 0, 0);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: rgb(0, 0, 0);
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
